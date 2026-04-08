@@ -1,38 +1,102 @@
-# Smart Room IoT System
+# 🏠 Smart Room IoT System
 
-Smart Room IoT System is a multi-layer project for monitoring and controlling a connected room.
+Smart Room IoT System is a full-stack IoT project designed to monitor
+and control a connected environment in real time.
 
-## Features
+The system integrates hardware (Arduino + sensors), a backend (Spring
+Boot), a communication bridge (Python), and a desktop dashboard
+(JavaFX).
 
-- Temperature and humidity monitoring
-- Light ON/OFF control
-- Spring Boot backend API
-- JavaFX desktop dashboard
-- Arduino integration
+------------------------------------------------------------------------
 
-## Architecture
+## 🚀 Features
 
-JavaFX Dashboard -> Spring Boot Backend -> Arduino / Sensors
+-   🌡️ Real-time temperature monitoring
+-   💧 Humidity monitoring
+-   💡 Light control (ON / OFF)
+-   🔄 REST communication between frontend and backend
+-   🔌 Serial communication with Arduino
+-   🖥️ Desktop dashboard (JavaFX)
 
-## Project Structure
+------------------------------------------------------------------------
 
-- `backend/` : Spring Boot REST API
-- `dashboard/` : JavaFX desktop application
-- `arduino/` : embedded code for sensors and actuators
+## 🏗️ Architecture Overview
 
-## Technologies
+JavaFX Dashboard\
+↓ (HTTP REST API)\
+Spring Boot Backend\
+↓ (HTTP / polling)\
+Python Serial Bridge\
+↓ (Serial USB)\
+Arduino (Sensors + Actuators)
 
-- Java
-- JavaFX
-- Spring Boot
-- Arduino
-- REST API
-- Jackson
+------------------------------------------------------------------------
 
-## What I learned
+## 📁 Project Structure
 
-- Desktop UI development with JavaFX
-- REST communication between frontend and backend
-- JSON parsing and HTTP requests
-- IoT system architecture
-- Hardware/software integration
+smart-room-iot-system/ ├── backend/ ├── dashboard/ ├── Arduino/ ├──
+SerialBridge/
+
+------------------------------------------------------------------------
+
+## 🛠️ Technologies Used
+
+-   Java 17
+-   JavaFX
+-   Spring Boot
+-   Python 3
+-   Arduino (C/C++)
+-   REST API
+-   Jackson (JSON parsing)
+-   Serial communication
+
+------------------------------------------------------------------------
+
+## ⚙️ Installation & Setup
+
+### Clone
+
+git clone https://github.com/LounesYouva/smart-room-iot-system.git cd
+smart-room-iot-system
+
+------------------------------------------------------------------------
+
+## Backend
+
+cd backend mvn spring-boot:run
+
+------------------------------------------------------------------------
+
+## Python Bridge
+
+pip install pyserial requests
+
+cd SerialBridge python testBridge.py
+
+------------------------------------------------------------------------
+
+## Arduino
+
+Open Arduino/sketch_mar12a.ino and upload to board.
+
+------------------------------------------------------------------------
+
+## Dashboard
+
+cd dashboard mvn javafx:run
+
+------------------------------------------------------------------------
+
+## 💡 What I Learned
+
+-   Full IoT architecture
+-   JavaFX UI
+-   REST APIs
+-   JSON parsing
+-   Serial communication
+
+------------------------------------------------------------------------
+
+## 📄 License
+
+MIT License
